@@ -66,18 +66,18 @@ public class TaskContentProvider extends ContentProvider {
     }
 
 
-    // TODO: Implement insert to handle requests to insert a single new row of data
+    // (COMPLETE): Implement insert to handle requests to insert a single new row of data
     @Override
     public Uri insert(@NonNull Uri uri, ContentValues values) {
 
-        // TODO: 1. Get access to the task database (to write new data to)
+        // (COMPLETE): 1. Get access to the task database (to write new data to)
         final SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
 
-        // TODO: 2. Write URI matching code to identify the match for the tasks directory
+        // (COMPLETE): 2. Write URI matching code to identify the match for the tasks directory
         int match = sUriMatcher.match(uri);
 
-        // TODO: 3. Insert new values into the database
-        // TODO: 4. Set the value for the returnedUri and write the default case for unknown URI's
+        // (COMPLETE): 3. Insert new values into the database
+        // (COMPLETE): 4. Set the value for the returnedUri and write the default case for unknown URI's
 
         Uri returnUri; // to be returned
 
@@ -96,7 +96,7 @@ public class TaskContentProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
 
-        // TODO: 5. Notify the resolver if the uri has been changed
+        // (COMPLETE): 5. Notify the resolver if the uri has been changed
         getContext().getContentResolver().notifyChange(uri, null);
 
         // Return constructed uri (this points to the newly inserted row of data)

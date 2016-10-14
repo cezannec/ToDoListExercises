@@ -34,7 +34,7 @@ public class AddTaskActivity extends AppCompatActivity {
      */
     public void onClickAddTask(View view) {
         // Not yet implemented
-        // TODO: 6. Check if EditText is empty, if not retrieve input and store it in a ContentValues object
+        // (COMPLETE): 6. Check if EditText is empty, if not retrieve input and store it in a ContentValues object
 
         // Check if the EditText input is empty - (don't create an entry if there is no input)
         String input = ((EditText) findViewById(R.id.editTextTaskDescription)).getText().toString();
@@ -49,10 +49,10 @@ public class AddTaskActivity extends AppCompatActivity {
         contentValues.put(TaskContract.TaskEntry.COLUMN_DESCRIPTION, input);
         contentValues.put(TaskContract.TaskEntry.COLUMN_PRIORITY, mPriority);
 
-        // TODO: 7. Insert new task data via a ContentResolver
+        // (COMPLETE): 7. Insert new task data via a ContentResolver
         Uri uri = getContentResolver().insert(TaskContract.TaskEntry.CONTENT_URI, contentValues);
 
-        // TODO: 8. Display the URI that's returned with a Toast
+        // (COMPLETE): 8. Display the URI that's returned with a Toast
         // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
 
         if(uri != null) {

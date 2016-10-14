@@ -79,7 +79,7 @@ public class TestTaskContentProvider {
             /* The ProviderInfo will contain the authority, which is what we want to test */
             ProviderInfo providerInfo = pm.getProviderInfo(componentName, 0);
             String actualAuthority = providerInfo.authority;
-            String expectedAuthority = "com.example.udacity.todolist";
+            String expectedAuthority = packageName;
 
             /* Make sure that the registered authority matches the authority from the Contract */
             String incorrectAuthority =

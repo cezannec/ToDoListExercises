@@ -18,7 +18,7 @@ public class TaskContentProvider extends ContentProvider {
     // TODO: Declare a static variable for the Uri matcher that you construct
 
     // TODO: Define a static buildUriMatcher method that associates URI's with their int match
-    
+
 
     // Member variable for a TaskDbHelper that's initialized in the onCreate() method
     private TaskDbHelper mTaskDbHelper;
